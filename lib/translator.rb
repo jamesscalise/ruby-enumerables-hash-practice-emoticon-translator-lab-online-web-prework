@@ -16,7 +16,7 @@ def get_japanese_emoticon(file_name, western_emoticon)
   dict = load_library(file_name)
   
   name = dict["get_emoticon"].find{|key, value| key == western_emoticon}
-  binding.pry
+ 
   if name
    return name[1]
   else
