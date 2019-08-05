@@ -13,7 +13,7 @@ def load_library(file_name)
 end
 
 def get_japanese_emoticon(file_name, western_emoticon)
-  list = load_library(file_name)
+  dict = load_library(file_name)
   
   
   if name
@@ -25,7 +25,7 @@ def get_japanese_emoticon(file_name, western_emoticon)
 end
 
 def get_english_meaning(file_name, japanese_emoticon)
-  list = load_library(file_name)
+  dict = load_library(file_name)
   
   
   if name
