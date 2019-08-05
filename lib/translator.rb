@@ -18,9 +18,7 @@ def get_japanese_emoticon(file_name, western_emoticon)
   name = dict["get_emoticon"].find{|key, value| key == western_emoticon}
   binding.pry
   if name
-    name.each{|key, value|
-    return value
-    }
+   return name[1]
   else
     return "Sorry, that emoticon was not found"
   end
