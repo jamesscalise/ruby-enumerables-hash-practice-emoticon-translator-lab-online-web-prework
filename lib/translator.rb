@@ -28,9 +28,10 @@ end
 def get_english_meaning(file_name, japanese_emoticon)
   dict = load_library(file_name)
   
-  
+  name = dict["get_meaning"].find{|key, value| key == japanese_emoticon}
+ 
   if name
-    
+   return name[1]
   else
     return "Sorry, that emoticon was not found"
   end
