@@ -15,11 +15,7 @@ end
 def get_japanese_emoticon(file_name, western_emoticon)
   list = load_library(file_name)
   
-  name = list.find{|item| 
-    item[1].any?{| value | 
-      value == western_emoticon
-    }
-  }
+  
   if name
     return name[1][1]
   else
@@ -31,15 +27,9 @@ end
 def get_english_meaning(file_name, japanese_emoticon)
   list = load_library(file_name)
   
-  name = list.find{|item| 
-    item.any?{| key, value| value == japanese_emoticon
-      
-    }
-  }
+  
   if name
-    name.each do |key, value|
-      return key.to_s
-    end
+    
   else
     return "Sorry, that emoticon was not found"
   end
