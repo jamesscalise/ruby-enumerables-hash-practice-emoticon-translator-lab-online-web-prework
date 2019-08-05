@@ -8,7 +8,7 @@ def load_library(file_name)
     newHash["get_emoticon"][entry[1][0]] = entry[1][1]
     newHash["get_meaning"][entry[1][1]] = entry[0]
   
-    
+    binding.pry
   
   }
   return newHash
