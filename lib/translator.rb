@@ -8,10 +8,10 @@ def load_library(file_name)
     newHash["get_emoticon"][entry[0]] = entry[1]
     newHash["get_meaning"][entry[1][0]] = entry[0]
     newHash["get_meaning"][entry[1][1]] = entry[0]
-    binding.pry
+    
   
   }
-  return file
+  return newHash
 end
 
 def get_japanese_emoticon(file_name, western_emoticon)
