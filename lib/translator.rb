@@ -15,9 +15,11 @@ end
 def get_japanese_emoticon(file_name, western_emoticon)
   dict = load_library(file_name)
   
-  
+  name = dict["get_emoticon"].find{|key, value| key == western_emoticon}
   if name
-    return name[1][1]
+    name.each{|key, value|
+    return value
+    }
   else
     return "Sorry, that emoticon was not found"
   end
